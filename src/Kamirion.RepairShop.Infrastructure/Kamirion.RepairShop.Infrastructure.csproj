@@ -17,6 +17,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Kamirion.RepairShop.Shared\Kamirion.RepairShop.Shared.csproj" />
+    <ProjectReference Include="..\Modules\Kamirion.RepairShop.Tenancy\Kamirion.RepairShop.Tenancy.Domain\Kamirion.RepairShop.Tenancy.Domain.csproj" />
+    <ProjectReference Include="..\Modules\Kamirion.RepairShop.Tenancy\Kamirion.RepairShop.Tenancy.Contracts\Kamirion.RepairShop.Tenancy.Contracts.csproj" />
   </ItemGroup>
 
 </Project>

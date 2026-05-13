@@ -1,9 +1,12 @@
+using Kamirion.RepairShop.Infrastructure.Extensions;
 using Kamirion.RepairShop.Web.Extensions;
+using Kamirion.RepairShop.Web.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddDatabase(builder.Configuration);
+builder.Services.AddTenancy();
 
 var app = builder.Build();
 
@@ -15,6 +18,7 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseMiddleware<TenantResolutionMiddleware>();
 app.UseAuthorization();
 
 app.MapStaticAssets();

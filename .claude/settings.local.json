@@ -7,7 +7,15 @@
       "Bash(Select-Object Name, PSIsContainer)",
       "Bash(Format-Table -AutoSize)",
       "Bash(dotnet new *)",
-      "Bash(dotnet build *)"
+      "Bash(dotnet build *)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" -Force | Select-Object FullName, @{Name='Type';Expression={if\\($_.PSIsContainer\\) {'Dir'} else {'File'}}} | Sort-Object FullName)",
+      "PowerShell(Test-Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\"; Get-Item \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" | Select-Object FullName, @{Name='Exists';Expression={$true}})",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" -Depth 2 | Where-Object { -not $_.FullName.Contains\\('.git'\\) -and -not $_.FullName.Contains\\('.vs'\\) -and -not $_.FullName.Contains\\('.claude'\\) } | Sort-Object FullName | Format-Table FullName, @{Name='Type';Expression={if\\($_.PSIsContainer\\) {'DIR'} else {'FILE'}}} -AutoSize)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\" -Recurse | Where-Object { -not $_.FullName.Contains\\('.git'\\) } | Select-Object FullName | Sort-Object)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\tests\" -Recurse | Where-Object { -not $_.FullName.Contains\\('.git'\\) } | Select-Object FullName | Sort-Object)",
+      "Bash(dotnet sln *)",
+      "Bash(Get-ChildItem -Recurse \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Kamirion.RepairShop.Web\")",
+      "Bash(Select-Object FullName)"
     ]
   }
 }

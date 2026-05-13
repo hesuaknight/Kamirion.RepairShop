@@ -55,7 +55,11 @@
       "Bash(docker stop *)",
       "Bash(docker rm *)",
       "Bash(xargs grep -l \"Middleware\\\\|ICurrentUser\\\\|CurrentUserContext\")",
-      "Bash(xargs grep -l \"global using\")"
+      "Bash(xargs grep -l \"global using\")",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Modules\" | Where-Object { $_.PSIsContainer })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Modules\\\\Kamirion.RepairShop.Customers\" | ForEach-Object { $_.Name })",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Kamirion.RepairShop.Infrastructure\" -Recurse | Where-Object { $_.PSIsContainer } | Select-Object -ExpandProperty FullName)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Kamirion.RepairShop.Shared\" -Recurse | Where-Object { $_.PSIsContainer } | Select-Object -ExpandProperty FullName)"
     ]
   }
 }

@@ -21,7 +21,11 @@
       "Bash(Sort-Object FullName)",
       "Bash(Remove-Item *)",
       "Bash(dotnet --version)",
-      "Bash(dotnet csharp *)"
+      "Bash(dotnet csharp *)",
+      "Bash(Select-Object Name, FullName)",
+      "PowerShell(tree *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(dotnet build *)"
     ]
   }
 }

@@ -1,5 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Kamirion.RepairShop.Analytics.Application\Kamirion.RepairShop.Analytics.Application.csproj" />
+    <ProjectReference Include="..\Kamirion.RepairShop.Analytics.Domain\Kamirion.RepairShop.Analytics.Domain.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

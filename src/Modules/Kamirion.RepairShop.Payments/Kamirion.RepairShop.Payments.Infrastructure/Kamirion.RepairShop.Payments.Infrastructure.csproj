@@ -1,5 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\Kamirion.RepairShop.Payments.Application\Kamirion.RepairShop.Payments.Application.csproj" />
+    <ProjectReference Include="..\Kamirion.RepairShop.Payments.Domain\Kamirion.RepairShop.Payments.Domain.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

@@ -42,7 +42,18 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Modules\\\\Kamirion.RepairShop.Identity\" -Recurse -Directory | Where-Object {$_.Name -ne 'obj' -and $_.Name -ne 'bin'})",
       "Bash(grep -v \"\\\\\\\\obj\\\\\\\\\")",
       "Bash(grep -v \"\\\\\\\\bin\\\\\\\\\")",
-      "PowerShell(head *)"
+      "PowerShell(head *)",
+      "Bash(dotnet ef *)",
+      "Bash(Select-Object Name, Length)",
+      "PowerShell(Get-Service *)",
+      "PowerShell(sqllocaldb info *)",
+      "PowerShell(docker --version 2>&1; docker ps 2>&1 | Select-Object -First 3)",
+      "Bash(docker run *)",
+      "Bash(docker start *)",
+      "Bash(docker exec *)",
+      "Bash(docker port sqlserver *)",
+      "Bash(docker stop *)",
+      "Bash(docker rm *)"
     ]
   }
 }

@@ -8,6 +8,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddTenancy();
 builder.Services.AddAppIdentity();
+builder.Services.AddHangfireInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
@@ -22,6 +23,7 @@ app.UseRouting();
 app.UseMiddleware<TenantResolutionMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
+app.UseHangfireInfrastructure();
 
 app.MapStaticAssets();
 

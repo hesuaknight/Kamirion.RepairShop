@@ -62,7 +62,8 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Kamirion.RepairShop.Shared\" -Recurse | Where-Object { $_.PSIsContainer } | Select-Object -ExpandProperty FullName)",
       "Bash(Select-Object Name)",
       "PowerShell(ls \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Kamirion.RepairShop.Web\" | Where-Object { $_.PSIsContainer })",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\" | Select-Object Name, @{Name=\"Type\";Expression={if \\($_.PSIsContainer\\) {\"Dir\"} else {\"File\"}}})"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\" | Select-Object Name, @{Name=\"Type\";Expression={if \\($_.PSIsContainer\\) {\"Dir\"} else {\"File\"}}})",
+      "Bash(xargs grep -l \"public static.*IServiceCollection.*Add\")"
     ]
   }
 }

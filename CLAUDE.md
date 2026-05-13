@@ -2,7 +2,7 @@
 
 ## IDENTIDAD DEL PROYECTO
 - Solución: `Kamirion.RepairShop`
-- Stack: ASP.NET Core 9 + EF Core + SQL Server + Hangfire + Serilog
+- Stack: ASP.NET Core 10 + EF Core + SQL Server + Hangfire + Serilog
 - Arquitectura: Modular Monolith + Clean Architecture
 - Naming: `Kamirion.RepairShop.{Module}.{Layer}`
 

@@ -30,7 +30,10 @@
       "Bash(dotnet add *)",
       "Bash(dotnet package *)",
       "Bash(dotnet test *)",
-      "Bash(echo \"Exit code: $?\")"
+      "Bash(echo \"Exit code: $?\")",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" -Recurse -Attributes Directory)",
+      "Bash(Select-Object -ExpandProperty FullName)",
+      "Bash(Sort-Object)"
     ]
   }
 }

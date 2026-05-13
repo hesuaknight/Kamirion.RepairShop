@@ -13,4 +13,8 @@
     <PackageReference Include="FluentAssertions" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../../src/Kamirion.RepairShop.Shared/Kamirion.RepairShop.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

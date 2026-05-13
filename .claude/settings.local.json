@@ -35,7 +35,13 @@
       "Bash(Select-Object -ExpandProperty FullName)",
       "Bash(Sort-Object)",
       "Bash(Get-ChildItem *)",
-      "WebFetch(domain:www.nuget.org)"
+      "WebFetch(domain:www.nuget.org)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Modules\\\\Kamirion.RepairShop.Identity\\\\Kamirion.RepairShop.Identity.Infrastructure\" -Recurse -File | Where-Object {$_.Extension -eq '.cs'})",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Modules\\\\Kamirion.RepairShop.Identity\\\\Kamirion.RepairShop.Identity.Domain\" -Recurse -File | Where-Object {$_.Extension -eq '.cs'})",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Modules\\\\Kamirion.RepairShop.Identity\\\\Kamirion.RepairShop.Identity.Application\" -Recurse -File | Where-Object {$_.Extension -eq '.cs'})",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Modules\\\\Kamirion.RepairShop.Identity\" -Recurse -Directory | Where-Object {$_.Name -ne 'obj' -and $_.Name -ne 'bin'})",
+      "Bash(grep -v \"\\\\\\\\obj\\\\\\\\\")",
+      "Bash(grep -v \"\\\\\\\\bin\\\\\\\\\")"
     ]
   }
 }

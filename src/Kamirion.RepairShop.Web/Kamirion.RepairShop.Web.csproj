@@ -1,6 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <ItemGroup>
     <ProjectReference Include="..\Kamirion.RepairShop.Shared\Kamirion.RepairShop.Shared.csproj" />
+    <ProjectReference Include="..\Kamirion.RepairShop.Infrastructure\Kamirion.RepairShop.Infrastructure.csproj" />
     <ProjectReference Include="..\Modules\Kamirion.RepairShop.Analytics\Kamirion.RepairShop.Analytics.Contracts\Kamirion.RepairShop.Analytics.Contracts.csproj" />
     <ProjectReference Include="..\Modules\Kamirion.RepairShop.Analytics\Kamirion.RepairShop.Analytics.Application\Kamirion.RepairShop.Analytics.Application.csproj" />
     <ProjectReference Include="..\Modules\Kamirion.RepairShop.Analytics\Kamirion.RepairShop.Analytics.Infrastructure\Kamirion.RepairShop.Analytics.Infrastructure.csproj" />

@@ -2,6 +2,7 @@
   <Folder Name="/src/">
     <Project Path="src/Kamirion.RepairShop.Shared/Kamirion.RepairShop.Shared.csproj" />
     <Project Path="src/Kamirion.RepairShop.Web/Kamirion.RepairShop.Web.csproj" />
+    <Project Path="src/Kamirion.RepairShop.Infrastructure/Kamirion.RepairShop.Infrastructure.csproj" />
   </Folder>
   <Folder Name="/src/Modules/" />
   <Folder Name="/src/Modules/Kamirion.RepairShop.Analytics/">

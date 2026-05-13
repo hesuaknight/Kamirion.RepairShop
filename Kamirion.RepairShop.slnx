@@ -88,4 +88,8 @@
     <Project Path="src/Modules/Kamirion.RepairShop.Tenancy/Kamirion.RepairShop.Tenancy.Domain/Kamirion.RepairShop.Tenancy.Domain.csproj" />
     <Project Path="src/Modules/Kamirion.RepairShop.Tenancy/Kamirion.RepairShop.Tenancy.Infrastructure/Kamirion.RepairShop.Tenancy.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Kamirion.RepairShop.Architecture.Tests/Kamirion.RepairShop.Architecture.Tests.csproj" />
+    <Project Path="tests/Kamirion.RepairShop.Shared.Tests/Kamirion.RepairShop.Shared.Tests.csproj" />
+  </Folder>
 </Solution>

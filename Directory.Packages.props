@@ -3,6 +3,13 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
   <ItemGroup>
-    <!-- Package versions will be added here as projects are created -->
+    <!-- Test infrastructure -->
+    <PackageVersion Include="coverlet.collector"        Version="6.0.4" />
+    <PackageVersion Include="Microsoft.NET.Test.Sdk"    Version="17.14.1" />
+    <PackageVersion Include="xunit"                     Version="2.9.3" />
+    <PackageVersion Include="xunit.runner.visualstudio" Version="3.1.4" />
+    <!-- Test utilities -->
+    <PackageVersion Include="FluentAssertions"           Version="8.10.0" />
+    <PackageVersion Include="NetArchTest.Rules"          Version="1.3.2" />
   </ItemGroup>
 </Project>

@@ -25,7 +25,12 @@
       "Bash(Select-Object Name, FullName)",
       "PowerShell(tree *)",
       "PowerShell(Get-ChildItem *)",
-      "PowerShell(dotnet build *)"
+      "PowerShell(dotnet build *)",
+      "Bash(dir /b)",
+      "Bash(dotnet add *)",
+      "Bash(dotnet package *)",
+      "Bash(dotnet test *)",
+      "Bash(echo \"Exit code: $?\")"
     ]
   }
 }

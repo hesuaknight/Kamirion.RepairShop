@@ -7,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddTenancy();
+builder.Services.AddAppIdentity();
 
 var app = builder.Build();
 
@@ -19,6 +20,7 @@ if (!app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseRouting();
 app.UseMiddleware<TenantResolutionMiddleware>();
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapStaticAssets();

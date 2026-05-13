@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/Kamirion.RepairShop.Shared/Kamirion.RepairShop.Shared.csproj" />
     <Project Path="src/Kamirion.RepairShop.Web/Kamirion.RepairShop.Web.csproj" />
   </Folder>
 </Solution>

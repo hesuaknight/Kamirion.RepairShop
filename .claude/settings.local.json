@@ -15,7 +15,13 @@
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\tests\" -Recurse | Where-Object { -not $_.FullName.Contains\\('.git'\\) } | Select-Object FullName | Sort-Object)",
       "Bash(dotnet sln *)",
       "Bash(Get-ChildItem -Recurse \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Kamirion.RepairShop.Web\")",
-      "Bash(Select-Object FullName)"
+      "Bash(Select-Object FullName)",
+      "Bash(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" -Recurse -Force)",
+      "Bash(Select-Object FullName, PSIsContainer)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Remove-Item *)",
+      "Bash(dotnet --version)",
+      "Bash(dotnet csharp *)"
     ]
   }
 }

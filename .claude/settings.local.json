@@ -64,7 +64,9 @@
       "PowerShell(ls \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\\\\Kamirion.RepairShop.Web\" | Where-Object { $_.PSIsContainer })",
       "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\\\\src\" | Select-Object Name, @{Name=\"Type\";Expression={if \\($_.PSIsContainer\\) {\"Dir\"} else {\"File\"}}})",
       "Bash(xargs grep -l \"public static.*IServiceCollection.*Add\")",
-      "Bash(grep -E \"\\\\.\\(cs|json|xml\\)$\")"
+      "Bash(grep -E \"\\\\.\\(cs|json|xml\\)$\")",
+      "Bash(findstr /E \"Dockerfile .dockerignore\")",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.Name })"
     ]
   }
 }

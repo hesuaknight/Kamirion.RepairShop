@@ -1,0 +1,27 @@
+# Build artifacts
+**/bin/
+**/obj/
+
+# Logs
+logs/
+**/logs/
+
+# Test projects
+tests/
+
+# Git and dev tooling
+.git/
+.gitignore
+.github/
+.vs/
+.vscode/
+.idea/
+.claude/
+
+# Documentation
+docs/
+*.md
+
+# IDE user files
+*.user
+*.suo

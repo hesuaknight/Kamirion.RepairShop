@@ -66,7 +66,12 @@
       "Bash(xargs grep -l \"public static.*IServiceCollection.*Add\")",
       "Bash(grep -E \"\\\\.\\(cs|json|xml\\)$\")",
       "Bash(findstr /E \"Dockerfile .dockerignore\")",
-      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.Name })"
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\Patri\\\\source\\\\repos\\\\Kamirion.RepairShop\" | Where-Object { $_.PSIsContainer } | ForEach-Object { $_.Name })",
+      "Bash(xargs grep -l \"NetArchTest\")",
+      "Bash(Get-Content \"C:\\\\Users\\\\Patri\\\\.claude\\\\projects\\\\C--Users-Patri-source-repos-Kamirion-RepairShop\\\\0e66d4db-0a0e-4756-9f0e-f8183bf37bc0\\\\tool-results\\\\bnksksku7.txt\")",
+      "Bash(Select-Object -Last 60)",
+      "Bash(dotnet script -e ' *)",
+      "Bash(powershell -Command ' *)"
     ]
   }
 }

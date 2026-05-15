@@ -1,3 +1,4 @@
+using System.Reflection;
 using FluentValidation;
 using Kamirion.RepairShop.Shared.Behaviors;
 using MediatR;
@@ -8,11 +9,11 @@ internal static class MediatRExtensions
 {
     internal static IServiceCollection AddMediatRInfrastructure(this IServiceCollection services)
     {
-        // All Application assemblies are referenced by this project and loaded at startup.
-        var applicationAssemblies = AppDomain.CurrentDomain
-            .GetAssemblies()
-            .Where(a => a.FullName?.Contains("Kamirion.RepairShop.") == true
-                     && a.FullName.Contains(".Application,"))
+        // Load all Application assemblies from disk so lazy-loaded ones are included in the scan.
+        var baseDir = AppDomain.CurrentDomain.BaseDirectory;
+        var applicationAssemblies = Directory
+            .GetFiles(baseDir, "Kamirion.RepairShop.*.Application.dll")
+            .Select(Assembly.LoadFrom)
             .ToArray();
 
         services.AddMediatR(cfg =>

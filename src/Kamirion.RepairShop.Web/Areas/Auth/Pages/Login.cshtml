@@ -1,0 +1,31 @@
+@page
+@model Kamirion.RepairShop.Web.Areas.Auth.Pages.LoginModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Kamirion.RepairShop.Web.Modules.Identity.IdentityResources> Localizer
+
+@{
+    ViewData["Title"] = Localizer["Login_Title"];
+}
+
+<div class="row justify-content-center mt-5">
+    <div class="col-md-4">
+        <h2 class="mb-4">@Localizer["Login_Title"]</h2>
+
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Email" class="form-label">@Localizer["Login_Email_Label"]</label>
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" />
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Input.Password" class="form-label">@Localizer["Login_Password_Label"]</label>
+                <input asp-for="Input.Password" class="form-control" type="password" autocomplete="current-password" />
+            </div>
+
+            <input type="hidden" asp-for="ReturnUrl" />
+
+            <button type="submit" class="btn btn-primary w-100">@Localizer["Login_Submit_Button"]</button>
+        </form>
+    </div>
+</div>

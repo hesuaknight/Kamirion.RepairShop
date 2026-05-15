@@ -1,0 +1,12 @@
+@{
+    ViewData["Title"] = "Inicio";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenido</h1>
+    <p>Sesión activa como <strong>@User.Identity?.Name</strong></p>
+    <form method="post" action="/auth/logout">
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-outline-secondary">Cerrar sesión</button>
+    </form>
+</div>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <data name="Login_Title" xml:space="preserve">
+    <value>Iniciar sesión</value>
+  </data>
+  <data name="Login_Email_Label" xml:space="preserve">
+    <value>Correo electrónico</value>
+  </data>
+  <data name="Login_Password_Label" xml:space="preserve">
+    <value>Contraseña</value>
+  </data>
+  <data name="Login_Submit_Button" xml:space="preserve">
+    <value>Ingresar</value>
+  </data>
+  <data name="Login_InvalidCredentials_Error" xml:space="preserve">
+    <value>Credenciales incorrectas. Por favor, verifica e intenta nuevamente.</value>
+  </data>
+  <data name="Login_Email_Required_Validation" xml:space="preserve">
+    <value>El correo electrónico es requerido.</value>
+  </data>
+  <data name="Login_Email_Format_Validation" xml:space="preserve">
+    <value>Ingrese un correo electrónico válido.</value>
+  </data>
+  <data name="Login_Password_Required_Validation" xml:space="preserve">
+    <value>La contraseña es requerida.</value>
+  </data>
+  <data name="Login_Password_MinLength_Validation" xml:space="preserve">
+    <value>La contraseña debe tener al menos 8 caracteres.</value>
+  </data>
+  <data name="AccessDenied_Title" xml:space="preserve">
+    <value>Acceso denegado</value>
+  </data>
+  <data name="AccessDenied_Message" xml:space="preserve">
+    <value>No tiene permiso para acceder a este recurso.</value>
+  </data>
+  <data name="Common_Back_Home" xml:space="preserve">
+    <value>Volver al inicio</value>
+  </data>
+</root>

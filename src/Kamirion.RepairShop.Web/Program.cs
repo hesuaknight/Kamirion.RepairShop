@@ -12,13 +12,20 @@ try
 {
     var builder = WebApplication.CreateBuilder(args);
 
+    builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
     builder.Services.AddControllersWithViews();
+    builder.Services.AddRazorPages().AddRazorPagesOptions(opts =>
+    {
+        opts.Conventions.AddAreaPageRoute("Auth", "/Login", "/auth/login");
+        opts.Conventions.AddAreaPageRoute("Auth", "/Logout", "/auth/logout");
+        opts.Conventions.AddAreaPageRoute("Auth", "/AccessDenied", "/auth/access-denied");
+    });
     builder.Services.AddDatabase(builder.Configuration);
     builder.Services.AddTenancy();
     builder.Services.AddAppIdentity();
     builder.Services.AddHangfireInfrastructure(builder.Configuration);
-    builder.Services.AddMediatRInfrastructure();
     builder.Services.AddIdentityInfrastructure();
+    builder.Services.AddMediatRInfrastructure();
     builder.AddSerilog();
 
     var app = builder.Build();
@@ -40,6 +47,13 @@ try
 
     app.UseHttpsRedirection();
     app.UseSerilogRequestLogging();
+    app.UseRequestLocalization(opts =>
+    {
+        var supportedCultures = new[] { "es", "es-AR", "en", "en-US" };
+        opts.SetDefaultCulture("es")
+            .AddSupportedCultures(supportedCultures)
+            .AddSupportedUICultures(supportedCultures);
+    });
     app.UseRouting();
     app.UseMiddleware<TenantResolutionMiddleware>();
     app.UseAuthentication();
@@ -53,6 +67,8 @@ try
         name: "default",
         pattern: "{controller=Home}/{action=Index}/{id?}")
         .WithStaticAssets();
+
+    app.MapRazorPages();
 
     app.Run();
 }

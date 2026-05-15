@@ -1,0 +1,13 @@
+@page
+@model Kamirion.RepairShop.Web.Areas.Auth.Pages.AccessDeniedModel
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Kamirion.RepairShop.Web.Modules.Identity.IdentityResources> Localizer
+
+@{
+    ViewData["Title"] = Localizer["AccessDenied_Title"];
+}
+
+<div class="text-center mt-5">
+    <h2 class="text-danger">@Localizer["AccessDenied_Title"]</h2>
+    <p class="lead">@Localizer["AccessDenied_Message"]</p>
+    <a href="/" class="btn btn-primary mt-3">@Localizer["Common_Back_Home"]</a>
+</div>

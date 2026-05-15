@@ -1,4 +1,5 @@
 using System.Reflection;
+using Kamirion.RepairShop.Communication.Domain;
 using Kamirion.RepairShop.Infrastructure.Identity;
 using Kamirion.RepairShop.Shared.Abstractions;
 using Kamirion.RepairShop.Shared.Identity;
@@ -20,6 +21,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
 
     public DbSet<Tenant> Tenants => Set<Tenant>();
     public DbSet<SecurityAuditLog> SecurityAuditLogs => Set<SecurityAuditLog>();
+    public DbSet<MessageTemplate> MessageTemplates => Set<MessageTemplate>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

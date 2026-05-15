@@ -37,6 +37,12 @@ try
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
         await db.Database.MigrateAsync();
         Log.Information("Database migrations applied successfully");
+
+        if (app.Environment.IsDevelopment())
+        {
+            await DatabaseSeeder.SeedDevelopmentDataAsync(db);
+            Log.Information("Development seed data applied successfully");
+        }
     }
 
     app.UseMiddleware<GlobalExceptionMiddleware>();

@@ -1,3 +1,4 @@
+using Kamirion.RepairShop.Communication.Application.Services;
 using Kamirion.RepairShop.Communication.Contracts;
 using Kamirion.RepairShop.Communication.Infrastructure.Settings;
 using Microsoft.Extensions.Configuration;
@@ -28,6 +29,9 @@ public static class CommunicationInfrastructureExtensions
             services.Configure<TwilioSettings>(configuration.GetSection(TwilioSettings.SectionName));
             services.AddScoped<IWhatsAppSender, TwilioWhatsAppSender>();
         }
+
+        services.AddScoped<IMessageTemplateRepository, MessageTemplateRepository>();
+        services.AddScoped<IMessageTemplateService, MessageTemplateService>();
 
         return services;
     }

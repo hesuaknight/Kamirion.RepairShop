@@ -5,11 +5,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Twilio" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Kamirion.RepairShop.Communication.Application\Kamirion.RepairShop.Communication.Application.csproj" />
     <ProjectReference Include="..\Kamirion.RepairShop.Communication.Domain\Kamirion.RepairShop.Communication.Domain.csproj" />
     <ProjectReference Include="..\Kamirion.RepairShop.Communication.Contracts\Kamirion.RepairShop.Communication.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\Kamirion.RepairShop.Infrastructure\Kamirion.RepairShop.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Kamirion.RepairShop.Communication.Domain\Kamirion.RepairShop.Communication.Domain.csproj" />
+    <ProjectReference Include="..\Kamirion.RepairShop.Communication.Contracts\Kamirion.RepairShop.Communication.Contracts.csproj" />
     <ProjectReference Include="..\..\..\Kamirion.RepairShop.Shared\Kamirion.RepairShop.Shared.csproj" />
   </ItemGroup>
 

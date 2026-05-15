@@ -25,6 +25,7 @@ try
     builder.Services.AddTenancy();
     builder.Services.AddAppIdentity();
     builder.Services.AddHangfireInfrastructure(builder.Configuration);
+    builder.Services.AddSignalRInfrastructure();
     builder.Services.AddIdentityInfrastructure();
     builder.Services.AddCommunicationInfrastructure(builder.Environment, builder.Configuration);
     builder.Services.AddMediatRInfrastructure();
@@ -77,6 +78,7 @@ try
         .WithStaticAssets();
 
     app.MapRazorPages();
+    app.UseSignalRInfrastructure();
 
     app.Run();
 }

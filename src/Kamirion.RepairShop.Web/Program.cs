@@ -1,6 +1,8 @@
+using Kamirion.RepairShop.Infrastructure;
 using Kamirion.RepairShop.Infrastructure.Extensions;
 using Kamirion.RepairShop.Web.Extensions;
 using Kamirion.RepairShop.Web.Middleware;
+using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 SerilogExtensions.ConfigureBootstrapLogger();
@@ -17,6 +19,13 @@ try
     builder.AddSerilog();
 
     var app = builder.Build();
+
+    await using (var scope = app.Services.CreateAsyncScope())
+    {
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        await db.Database.MigrateAsync();
+        Log.Information("Database migrations applied successfully");
+    }
 
     if (!app.Environment.IsDevelopment())
     {

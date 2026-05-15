@@ -1,5 +1,7 @@
 # Kamirion.RepairShop
 
+[![CI](https://github.com/hesuaknight/Kamirion.RepairShop/actions/workflows/ci.yml/badge.svg)](https://github.com/hesuaknight/Kamirion.RepairShop/actions/workflows/ci.yml)
+
 Sistema de gestión de taller de reparación de dispositivos.
 
 Stack: ASP.NET Core 10.0 · SQL Server · Hangfire · Serilog  

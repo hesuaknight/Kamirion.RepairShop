@@ -437,3 +437,5 @@ scripts/mark-done.py
 tasks.md
 .claude/commands/next-task.md
 .claude/commands/done.md
+scripts/get-next-task.ps1
+scripts/mark-done.ps1

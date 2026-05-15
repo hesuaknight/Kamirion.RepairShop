@@ -1,8 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Kamirion.RepairShop.Identity.Application\Kamirion.RepairShop.Identity.Application.csproj" />
+    <ProjectReference Include="..\Kamirion.RepairShop.Identity.Contracts\Kamirion.RepairShop.Identity.Contracts.csproj" />
     <ProjectReference Include="..\Kamirion.RepairShop.Identity.Domain\Kamirion.RepairShop.Identity.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Kamirion.RepairShop.Infrastructure\Kamirion.RepairShop.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

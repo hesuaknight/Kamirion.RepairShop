@@ -19,6 +19,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     }
 
     public DbSet<Tenant> Tenants => Set<Tenant>();
+    public DbSet<SecurityAuditLog> SecurityAuditLogs => Set<SecurityAuditLog>();
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

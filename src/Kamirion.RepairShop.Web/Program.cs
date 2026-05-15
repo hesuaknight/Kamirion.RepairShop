@@ -1,3 +1,4 @@
+using Kamirion.RepairShop.Identity.Infrastructure;
 using Kamirion.RepairShop.Infrastructure;
 using Kamirion.RepairShop.Infrastructure.Extensions;
 using Kamirion.RepairShop.Web.Extensions;
@@ -17,6 +18,7 @@ try
     builder.Services.AddAppIdentity();
     builder.Services.AddHangfireInfrastructure(builder.Configuration);
     builder.Services.AddMediatRInfrastructure();
+    builder.Services.AddIdentityInfrastructure();
     builder.AddSerilog();
 
     var app = builder.Build();
@@ -42,6 +44,7 @@ try
     app.UseMiddleware<TenantResolutionMiddleware>();
     app.UseAuthentication();
     app.UseAuthorization();
+    app.UseMiddleware<SecurityAuditMiddleware>();
     app.UseHangfireInfrastructure();
 
     app.MapStaticAssets();

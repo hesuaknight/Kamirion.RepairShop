@@ -431,3 +431,9 @@ FodyWeavers.xsd
 # Kamirion.RepairShop — custom rules
 appsettings.local.json
 appsettings.*.local.json
+.claude/settings.local.json
+scripts/get-next-task.py
+scripts/mark-done.py
+tasks.md
+.claude/commands/next-task.md
+.claude/commands/done.md

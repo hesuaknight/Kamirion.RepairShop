@@ -1,3 +1,4 @@
+using Kamirion.RepairShop.Communication.Infrastructure;
 using Kamirion.RepairShop.Identity.Infrastructure;
 using Kamirion.RepairShop.Infrastructure;
 using Kamirion.RepairShop.Infrastructure.Extensions;
@@ -25,6 +26,7 @@ try
     builder.Services.AddAppIdentity();
     builder.Services.AddHangfireInfrastructure(builder.Configuration);
     builder.Services.AddIdentityInfrastructure();
+    builder.Services.AddCommunicationInfrastructure(builder.Environment, builder.Configuration);
     builder.Services.AddMediatRInfrastructure();
     builder.AddSerilog();
 

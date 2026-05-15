@@ -16,6 +16,7 @@ try
     builder.Services.AddTenancy();
     builder.Services.AddAppIdentity();
     builder.Services.AddHangfireInfrastructure(builder.Configuration);
+    builder.Services.AddMediatRInfrastructure();
     builder.AddSerilog();
 
     var app = builder.Build();

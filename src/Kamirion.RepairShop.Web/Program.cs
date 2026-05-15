@@ -28,6 +28,8 @@ try
         Log.Information("Database migrations applied successfully");
     }
 
+    app.UseMiddleware<GlobalExceptionMiddleware>();
+
     if (!app.Environment.IsDevelopment())
     {
         app.UseExceptionHandler("/Error");

@@ -2,6 +2,7 @@ using System.Reflection;
 using Kamirion.RepairShop.Communication.Domain;
 using Kamirion.RepairShop.Infrastructure.Identity;
 using Kamirion.RepairShop.Shared.Abstractions;
+using Kamirion.RepairShop.Shared.Domain;
 using Kamirion.RepairShop.Shared.Identity;
 using Kamirion.RepairShop.Tenancy.Domain;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -9,7 +10,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Kamirion.RepairShop.Infrastructure;
 
-public class AppDbContext : IdentityDbContext<ApplicationUser>
+public class AppDbContext : IdentityDbContext<ApplicationUser>, IDomainEventSource
 {
     private readonly ITenantContext _tenantContext;
 
@@ -48,5 +49,16 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>
     private void ApplyTenantFilter<TEntity>(ModelBuilder builder) where TEntity : class, ITenantOwned
     {
         builder.Entity<TEntity>().HasQueryFilter(e => e.TenantId == _tenantContext.TenantId);
+    }
+
+    public IReadOnlyList<IDomainEvent> GetPendingDomainEvents() =>
+        ChangeTracker.Entries<AggregateRoot<string>>()
+            .SelectMany(e => e.Entity.DomainEvents)
+            .ToList();
+
+    public void ClearAllDomainEvents()
+    {
+        foreach (var entry in ChangeTracker.Entries<AggregateRoot<string>>())
+            entry.Entity.ClearDomainEvents();
     }
 }

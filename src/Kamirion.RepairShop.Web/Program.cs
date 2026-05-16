@@ -22,6 +22,7 @@ try
         opts.Conventions.AddAreaPageRoute("Auth", "/AccessDenied", "/auth/access-denied");
     });
     builder.Services.AddDatabase(builder.Configuration);
+    builder.Services.AddDomainEvents();
     builder.Services.AddTenancy();
     builder.Services.AddAppIdentity();
     builder.Services.AddHangfireInfrastructure(builder.Configuration);

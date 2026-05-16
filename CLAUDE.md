@@ -36,7 +36,7 @@ Cuando el código generado involucre alguna de estas áreas, leer el skill corre
 | Acciones de usuario | `.claude/rules/audit.md` | Se modifica estado, se crea o elimina cualquier entidad |
 | Seguridad | `.claude/rules/security.md` | Al finalizar CUALQUIER tarea con código nuevo |
 | Tests unitarios | `.claude/rules/unit-testing.md` | Se solicitan o generan tests |
-
+| UI / Vistas Razor | `.claude/rules/design-system.md` | Se genera o modifica cualquier archivo `.cshtml`, `_Layout`, CSS o JS de frontend |
 ---
 
 ## ESTRUCTURA DE MÓDULOS

@@ -3,6 +3,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Kamirion.RepairShop.Notifications.Application\Kamirion.RepairShop.Notifications.Application.csproj" />
     <ProjectReference Include="..\Kamirion.RepairShop.Notifications.Domain\Kamirion.RepairShop.Notifications.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Kamirion.RepairShop.Infrastructure\Kamirion.RepairShop.Infrastructure.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

@@ -1,6 +1,7 @@
 using System.Reflection;
 using Kamirion.RepairShop.Communication.Domain;
 using Kamirion.RepairShop.Infrastructure.Identity;
+using Kamirion.RepairShop.Notifications.Domain;
 using Kamirion.RepairShop.Search.Domain;
 using Kamirion.RepairShop.Shared.Abstractions;
 using Kamirion.RepairShop.Shared.Domain;
@@ -24,6 +25,7 @@ public class AppDbContext : IdentityDbContext<ApplicationUser>, IDomainEventSour
     public DbSet<Tenant> Tenants => Set<Tenant>();
     public DbSet<SecurityAuditLog> SecurityAuditLogs => Set<SecurityAuditLog>();
     public DbSet<MessageTemplate> MessageTemplates => Set<MessageTemplate>();
+    public DbSet<Notification> Notifications => Set<Notification>();
     public DbSet<SearchIndexEntry> SearchIndexEntries => Set<SearchIndexEntry>();
 
     protected override void OnModelCreating(ModelBuilder builder)

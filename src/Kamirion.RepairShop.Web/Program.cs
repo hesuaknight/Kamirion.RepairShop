@@ -30,6 +30,7 @@ try
     builder.Services.AddIdentityInfrastructure();
     builder.Services.AddCommunicationInfrastructure(builder.Environment, builder.Configuration);
     builder.Services.AddSearch();
+    builder.Services.AddNotifications();
     builder.Services.AddFileStorage(builder.Environment, builder.Configuration);
     builder.Services.AddMediatRInfrastructure();
     builder.AddSerilog();

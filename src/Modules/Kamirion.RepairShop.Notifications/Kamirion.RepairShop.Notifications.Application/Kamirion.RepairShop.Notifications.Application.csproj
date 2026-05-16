@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+    <ProjectReference Include="..\Kamirion.RepairShop.Notifications.Contracts\Kamirion.RepairShop.Notifications.Contracts.csproj" />
     <ProjectReference Include="..\Kamirion.RepairShop.Notifications.Domain\Kamirion.RepairShop.Notifications.Domain.csproj" />
     <ProjectReference Include="..\..\..\Kamirion.RepairShop.Shared\Kamirion.RepairShop.Shared.csproj" />
   </ItemGroup>

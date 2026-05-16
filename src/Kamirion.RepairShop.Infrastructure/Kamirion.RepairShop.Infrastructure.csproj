@@ -24,6 +24,7 @@
     <ProjectReference Include="..\Modules\Kamirion.RepairShop.Tenancy\Kamirion.RepairShop.Tenancy.Domain\Kamirion.RepairShop.Tenancy.Domain.csproj" />
     <ProjectReference Include="..\Modules\Kamirion.RepairShop.Tenancy\Kamirion.RepairShop.Tenancy.Contracts\Kamirion.RepairShop.Tenancy.Contracts.csproj" />
     <ProjectReference Include="..\Modules\Kamirion.RepairShop.Communication\Kamirion.RepairShop.Communication.Domain\Kamirion.RepairShop.Communication.Domain.csproj" />
+    <ProjectReference Include="..\Modules\Kamirion.RepairShop.Search\Kamirion.RepairShop.Search.Domain\Kamirion.RepairShop.Search.Domain.csproj" />
   </ItemGroup>
 
 </Project>

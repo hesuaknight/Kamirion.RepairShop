@@ -22,3 +22,13 @@ Arquitectura: Modular Monolith + Clean Architecture
 5. SQL Server estará accesible en `localhost:1433`.
 
 > El archivo `.env` está ignorado por git. Nunca commitear credenciales.
+
+## Full-Text Search
+
+El módulo de búsqueda usa SQL Server Full-Text Search (FTS).
+
+> **SQL Server Express no soporta FTS.** Se requiere Developer Edition o superior.
+
+El `docker-compose.yml` usa `MSSQL_PID=Developer` para habilitarlo automáticamente en el entorno local. La migración `AddSearchIndex` crea el catálogo `RepairShopCatalog` y el full-text index sobre `SearchIndexEntries.SearchableText` al iniciar la aplicación.
+
+Para verificar el estado del catálogo en un entorno existente, ejecutar el script `src/Kamirion.RepairShop.Infrastructure/Scripts/enable-fts.sql`.

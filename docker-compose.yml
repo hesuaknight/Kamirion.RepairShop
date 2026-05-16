@@ -17,6 +17,7 @@ services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     environment:
+      - MSSQL_PID=Developer
       - SA_PASSWORD=${SA_PASSWORD}
       - ACCEPT_EULA=Y
     ports:

@@ -3,6 +3,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Kamirion.RepairShop.Search.Application\Kamirion.RepairShop.Search.Application.csproj" />
     <ProjectReference Include="..\Kamirion.RepairShop.Search.Domain\Kamirion.RepairShop.Search.Domain.csproj" />
+    <ProjectReference Include="..\Kamirion.RepairShop.Search.Contracts\Kamirion.RepairShop.Search.Contracts.csproj" />
+    <ProjectReference Include="..\..\..\Kamirion.RepairShop.Infrastructure\Kamirion.RepairShop.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
 
   <PropertyGroup>

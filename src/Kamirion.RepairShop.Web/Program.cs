@@ -29,6 +29,7 @@ try
     builder.Services.AddSignalRInfrastructure();
     builder.Services.AddIdentityInfrastructure();
     builder.Services.AddCommunicationInfrastructure(builder.Environment, builder.Configuration);
+    builder.Services.AddSearch();
     builder.Services.AddFileStorage(builder.Environment, builder.Configuration);
     builder.Services.AddMediatRInfrastructure();
     builder.AddSerilog();

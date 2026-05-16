@@ -439,3 +439,4 @@ tasks.md
 .claude/commands/done.md
 scripts/get-next-task.ps1
 scripts/mark-done.ps1
+src/Kamirion.RepairShop.Web/wwwroot/uploads/

@@ -16,6 +16,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" />
     <PackageReference Include="Hangfire.AspNetCore" />
     <PackageReference Include="Hangfire.SqlServer" />
+    <PackageReference Include="AWSSDK.S3" />
   </ItemGroup>
 
   <ItemGroup>

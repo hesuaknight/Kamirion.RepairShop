@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <data name="Common_Save_Button" xml:space="preserve">
+    <value>Guardar</value>
+  </data>
+  <data name="Common_Cancel_Button" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Common_Delete_Button" xml:space="preserve">
+    <value>Eliminar</value>
+  </data>
+  <data name="Common_Edit_Button" xml:space="preserve">
+    <value>Editar</value>
+  </data>
+  <data name="Common_Back_Button" xml:space="preserve">
+    <value>Volver</value>
+  </data>
+  <data name="Common_Search_Placeholder" xml:space="preserve">
+    <value>Buscar...</value>
+  </data>
+  <data name="Common_Loading" xml:space="preserve">
+    <value>Cargando...</value>
+  </data>
+  <data name="Common_NoResults" xml:space="preserve">
+    <value>No se encontraron resultados.</value>
+  </data>
+  <data name="Common_Confirm_Delete" xml:space="preserve">
+    <value>¿Está seguro que desea eliminar este registro?</value>
+  </data>
+  <data name="Common_Error_Generic" xml:space="preserve">
+    <value>Ocurrió un error. Por favor, inténtelo nuevamente.</value>
+  </data>
+  <data name="Common_Error_Unauthorized" xml:space="preserve">
+    <value>No tiene permiso para realizar esta acción.</value>
+  </data>
+  <data name="Common_Error_NotFound" xml:space="preserve">
+    <value>El recurso solicitado no fue encontrado.</value>
+  </data>
+</root>

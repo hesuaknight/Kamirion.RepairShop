@@ -13,7 +13,7 @@ try
 {
     var builder = WebApplication.CreateBuilder(args);
 
-    builder.Services.AddLocalization(options => options.ResourcesPath = "Resources");
+    builder.Services.AddLocalizationInfrastructure();
     builder.Services.AddControllersWithViews();
     builder.Services.AddRazorPages().AddRazorPagesOptions(opts =>
     {
@@ -61,13 +61,7 @@ try
     app.UseHttpsRedirection();
     app.UseLocalFileStorage();
     app.UseSerilogRequestLogging();
-    app.UseRequestLocalization(opts =>
-    {
-        var supportedCultures = new[] { "es", "es-AR", "en", "en-US" };
-        opts.SetDefaultCulture("es")
-            .AddSupportedCultures(supportedCultures)
-            .AddSupportedUICultures(supportedCultures);
-    });
+    app.UseLocalizationInfrastructure();
     app.UseRouting();
     app.UseMiddleware<TenantResolutionMiddleware>();
     app.UseAuthentication();

@@ -67,4 +67,7 @@
   <data name="Common_Error_NotFound" xml:space="preserve">
     <value>El recurso solicitado no fue encontrado.</value>
   </data>
+  <data name="Common_Back_Home" xml:space="preserve">
+    <value>Volver al inicio</value>
+  </data>
 </root>

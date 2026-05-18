@@ -1,6 +1,7 @@
-@page
+@page "/auth/access-denied"
 @model Kamirion.RepairShop.Web.Areas.Auth.Pages.AccessDeniedModel
 @inject Microsoft.Extensions.Localization.IStringLocalizer<Kamirion.RepairShop.Web.Modules.Identity.IdentityResources> Localizer
+@inject Microsoft.Extensions.Localization.IStringLocalizer<Kamirion.RepairShop.Web.Shared.CommonResources> CommonLocalizer
 
 @{
     ViewData["Title"] = Localizer["AccessDenied_Title"];
@@ -20,7 +21,7 @@
         </p>
 
         <a href="/" class="btn btn-rs-secondary">
-            @Localizer["Common_Back_Home"]
+            @CommonLocalizer["Common_Back_Home"]
         </a>
 
     </div>

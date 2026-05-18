@@ -42,32 +42,47 @@ namespace Kamirion.RepairShop.Infrastructure.Migrations
                 columns: new[] { "TenantId", "EntityType", "EntityId" },
                 unique: true);
 
+            // Full-Text Search catalog and index are only created when FTS is installed.
+            // The standard SQL Server Docker image does not include FTS; in that environment
+            // the table is created but FTS features are unavailable (graceful degradation).
             migrationBuilder.Sql(@"
-                IF NOT EXISTS (SELECT 1 FROM sys.fulltext_catalogs WHERE name = 'RepairShopCatalog')
-                    CREATE FULLTEXT CATALOG RepairShopCatalog AS DEFAULT;");
+                IF FULLTEXTSERVICEPROPERTY('IsFulltextInstalled') = 1
+                BEGIN
+                    IF NOT EXISTS (SELECT 1 FROM sys.fulltext_catalogs WHERE name = 'RepairShopCatalog')
+                        CREATE FULLTEXT CATALOG RepairShopCatalog AS DEFAULT;
+                END;",
+                suppressTransaction: true);
 
             migrationBuilder.Sql(@"
-                IF NOT EXISTS (
-                    SELECT 1 FROM sys.fulltext_indexes fi
-                    JOIN sys.tables t ON fi.object_id = t.object_id
-                    WHERE t.name = 'SearchIndexEntries')
+                IF FULLTEXTSERVICEPROPERTY('IsFulltextInstalled') = 1
                 BEGIN
-                    CREATE FULLTEXT INDEX ON SearchIndexEntries(SearchableText)
-                        KEY INDEX PK_SearchIndexEntries
-                        ON RepairShopCatalog
-                        WITH CHANGE_TRACKING AUTO;
-                END");
+                    IF NOT EXISTS (
+                        SELECT 1 FROM sys.fulltext_indexes fi
+                        JOIN sys.tables t ON fi.object_id = t.object_id
+                        WHERE t.name = 'SearchIndexEntries')
+                    BEGIN
+                        CREATE FULLTEXT INDEX ON SearchIndexEntries(SearchableText)
+                            KEY INDEX PK_SearchIndexEntries
+                            ON RepairShopCatalog
+                            WITH CHANGE_TRACKING AUTO;
+                    END;
+                END;",
+                suppressTransaction: true);
         }
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.Sql(@"
-                IF EXISTS (
-                    SELECT 1 FROM sys.fulltext_indexes fi
-                    JOIN sys.tables t ON fi.object_id = t.object_id
-                    WHERE t.name = 'SearchIndexEntries')
-                    DROP FULLTEXT INDEX ON SearchIndexEntries;");
+                IF FULLTEXTSERVICEPROPERTY('IsFulltextInstalled') = 1
+                BEGIN
+                    IF EXISTS (
+                        SELECT 1 FROM sys.fulltext_indexes fi
+                        JOIN sys.tables t ON fi.object_id = t.object_id
+                        WHERE t.name = 'SearchIndexEntries')
+                        DROP FULLTEXT INDEX ON SearchIndexEntries;
+                END;",
+                suppressTransaction: true);
 
             migrationBuilder.DropTable(
                 name: "SearchIndexEntries");

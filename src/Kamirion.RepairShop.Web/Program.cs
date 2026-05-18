@@ -15,12 +15,7 @@ try
 
     builder.Services.AddLocalizationInfrastructure();
     builder.Services.AddControllersWithViews();
-    builder.Services.AddRazorPages().AddRazorPagesOptions(opts =>
-    {
-        opts.Conventions.AddAreaPageRoute("Auth", "/Login", "/auth/login");
-        opts.Conventions.AddAreaPageRoute("Auth", "/Logout", "/auth/logout");
-        opts.Conventions.AddAreaPageRoute("Auth", "/AccessDenied", "/auth/access-denied");
-    });
+    builder.Services.AddRazorPages();
     builder.Services.AddDatabase(builder.Configuration);
     builder.Services.AddDomainEvents();
     builder.Services.AddTenancy();
@@ -56,9 +51,8 @@ try
     {
         app.UseExceptionHandler("/Error");
         app.UseHsts();
+        app.UseHttpsRedirection();
     }
-
-    app.UseHttpsRedirection();
     app.UseLocalFileStorage();
     app.UseSerilogRequestLogging();
     app.UseLocalizationInfrastructure();

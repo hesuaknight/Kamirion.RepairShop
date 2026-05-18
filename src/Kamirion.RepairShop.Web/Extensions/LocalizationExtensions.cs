@@ -6,7 +6,7 @@ internal static class LocalizationExtensions
 {
     internal static IServiceCollection AddLocalizationInfrastructure(this IServiceCollection services)
     {
-        services.AddLocalization(options => options.ResourcesPath = "Resources");
+        services.AddLocalization();
         return services;
     }
 

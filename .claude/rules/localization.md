@@ -83,8 +83,11 @@ Ejemplos:
 ## CONFIGURACIÓN EN PROGRAM.CS
 
 ```csharp
-builder.Services.AddLocalization(options =>
-    options.ResourcesPath = "Resources");
+// IMPORTANTE: NO configurar ResourcesPath. El SDK deriva el nombre del recurso del namespace
+// de la marker class (ej: Kamirion.RepairShop.Web.Modules.Identity.IdentityResources).
+// Si se configura ResourcesPath = "Resources", el localizer busca un nombre diferente
+// (con prefijo "Resources.") que no coincide con lo que genera el compilador.
+builder.Services.AddLocalization();
 
 builder.Services.Configure<RequestLocalizationOptions>(options =>
 {

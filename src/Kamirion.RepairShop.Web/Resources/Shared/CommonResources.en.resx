@@ -67,4 +67,7 @@
   <data name="Common_Error_NotFound" xml:space="preserve">
     <value>The requested resource was not found.</value>
   </data>
+  <data name="Common_Back_Home" xml:space="preserve">
+    <value>Back to Home</value>
+  </data>
 </root>

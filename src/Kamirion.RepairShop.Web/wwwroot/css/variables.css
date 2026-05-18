@@ -1,0 +1,74 @@
+:root {
+  /* === BACKGROUNDS === */
+  --rs-bg-base:     #0d1117;
+  --rs-bg-surface:  #161b22;
+  --rs-bg-elevated: #1c2330;
+  --rs-bg-overlay:  #21262d;
+
+  /* === BORDERS === */
+  --rs-border:      rgba(255,255,255,0.08);
+  --rs-border-md:   rgba(255,255,255,0.14);
+  --rs-border-lg:   rgba(255,255,255,0.22);
+
+  /* === TEXTO === */
+  --rs-text-primary:   #e6edf3;
+  --rs-text-secondary: #8b949e;
+  --rs-text-muted:     #484f58;
+
+  /* === EMERALD (primario) === */
+  --rs-emerald:        #10b981;
+  --rs-emerald-light:  #34d399;
+  --rs-emerald-dim:    #059669;
+  --rs-emerald-bg:     rgba(16,185,129,0.10);
+  --rs-emerald-border: rgba(16,185,129,0.25);
+
+  /* === SEMÁNTICOS === */
+  --rs-sky:        #38bdf8;  --rs-sky-bg:    rgba(56,189,248,0.10);
+  --rs-amber:      #f59e0b;  --rs-amber-bg:  rgba(245,158,11,0.12);
+  --rs-red:        #f87171;  --rs-red-bg:    rgba(248,113,113,0.12);
+  --rs-violet:     #a78bfa;  --rs-violet-bg: rgba(167,139,250,0.10);
+  --rs-slate:      #64748b;  --rs-slate-bg:  rgba(100,116,139,0.15);
+  --rs-orange:     #fb923c;  --rs-orange-bg: rgba(251,146,60,0.12);
+
+  /* === RADIOS === */
+  --rs-radius-sm:   4px;
+  --rs-radius-md:   6px;
+  --rs-radius-lg:   10px;
+  --rs-radius-xl:   14px;
+  --rs-radius-pill: 999px;
+
+  /* === TIPOGRAFÍA === */
+  --rs-font:      'DM Sans', system-ui, sans-serif;
+  --rs-font-mono: 'JetBrains Mono', monospace;
+
+  /* === ESPACIADO === */
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-12: 48px;
+}
+
+/* === BOOTSTRAP OVERRIDES === */
+:root {
+  --bs-primary:          #10b981;
+  --bs-primary-rgb:      16,185,129;
+  --bs-body-bg:          #0d1117;
+  --bs-body-color:       #e6edf3;
+  --bs-card-bg:          #161b22;
+  --bs-card-border-color: rgba(255,255,255,0.08);
+  --bs-border-color:     rgba(255,255,255,0.08);
+  --bs-secondary-bg:     #161b22;
+  --bs-tertiary-bg:      #1c2330;
+  --bs-body-font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+html, body {
+  background-color: var(--rs-bg-base);
+  color: var(--rs-text-primary);
+  font-family: var(--rs-font);
+  font-size: 13px;
+}

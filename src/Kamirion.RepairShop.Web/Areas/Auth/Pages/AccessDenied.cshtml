@@ -6,8 +6,22 @@
     ViewData["Title"] = Localizer["AccessDenied_Title"];
 }
 
-<div class="text-center mt-5">
-    <h2 class="text-danger">@Localizer["AccessDenied_Title"]</h2>
-    <p class="lead">@Localizer["AccessDenied_Message"]</p>
-    <a href="/" class="btn btn-primary mt-3">@Localizer["Common_Back_Home"]</a>
+<div style="display:flex; justify-content:center; width:100%;">
+    <div style="max-width:400px; width:100%; background:var(--rs-bg-surface); border:1px solid var(--rs-border); border-radius:var(--rs-radius-xl); padding:2rem; text-align:center;">
+
+        <i class="ti ti-lock" aria-hidden="true" style="font-size:3rem; color:var(--rs-amber); display:block; margin-bottom:1rem;"></i>
+
+        <h1 style="font-size:20px; font-weight:600; color:var(--rs-text-primary); margin-bottom:.75rem;">
+            @Localizer["AccessDenied_Title"]
+        </h1>
+
+        <p style="color:var(--rs-text-secondary); margin-bottom:1.5rem;">
+            @Localizer["AccessDenied_Message"]
+        </p>
+
+        <a href="/" class="btn btn-rs-secondary">
+            @Localizer["Common_Back_Home"]
+        </a>
+
+    </div>
 </div>

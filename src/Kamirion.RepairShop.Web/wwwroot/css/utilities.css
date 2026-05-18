@@ -1,0 +1,11 @@
+.rs-text-primary   { color: var(--rs-text-primary) !important; }
+.rs-text-secondary { color: var(--rs-text-secondary) !important; }
+.rs-text-muted     { color: var(--rs-text-muted) !important; }
+.rs-text-emerald   { color: var(--rs-emerald) !important; }
+.rs-text-mono      { font-family: var(--rs-font-mono) !important; font-size: 12px; }
+
+.rs-divider {
+  border: none;
+  border-top: 1px solid var(--rs-border);
+  margin: var(--space-4) 0;
+}

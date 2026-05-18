@@ -1,0 +1,309 @@
+/* ============================================================
+   BOTONES
+   ============================================================ */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--rs-font);
+  font-weight: 500;
+  border-radius: var(--rs-radius-md);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  white-space: nowrap;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.btn          { height: 32px; padding: 0 14px; font-size: 12px; }
+.btn-sm       { height: 26px; padding: 0 10px; font-size: 11px; }
+.btn-lg       { height: 40px; padding: 0 20px; font-size: 13px; }
+.btn-icon     { width: 32px; padding: 0; justify-content: center; }
+
+.btn-rs-primary {
+  background: var(--rs-emerald);
+  color: #fff;
+  border-color: var(--rs-emerald);
+}
+.btn-rs-primary:hover {
+  background: var(--rs-emerald-light);
+  border-color: var(--rs-emerald-light);
+  color: #fff;
+}
+
+.btn-rs-secondary {
+  background: var(--rs-bg-elevated);
+  color: var(--rs-text-primary);
+  border-color: var(--rs-border-md);
+}
+.btn-rs-secondary:hover {
+  background: var(--rs-bg-overlay);
+  border-color: var(--rs-border-lg);
+  color: var(--rs-text-primary);
+}
+
+.btn-rs-ghost {
+  background: transparent;
+  color: var(--rs-text-secondary);
+  border-color: transparent;
+}
+.btn-rs-ghost:hover {
+  background: var(--rs-bg-elevated);
+  color: var(--rs-text-primary);
+}
+
+.btn-rs-danger {
+  background: var(--rs-red-bg);
+  color: var(--rs-red);
+  border-color: rgba(248,113,113,0.25);
+}
+.btn-rs-danger:hover {
+  background: rgba(248,113,113,0.2);
+  color: var(--rs-red);
+}
+
+/* ============================================================
+   FORMULARIOS
+   ============================================================ */
+
+.rs-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.rs-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--rs-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.rs-input,
+.rs-select {
+  width: 100%;
+  height: 36px;
+  padding: 0 var(--space-3);
+  background: var(--rs-bg-base);
+  color: var(--rs-text-primary);
+  border: 1px solid var(--rs-border-md);
+  border-radius: var(--rs-radius-md);
+  font-family: var(--rs-font);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.rs-input::placeholder {
+  color: var(--rs-text-muted);
+}
+
+.rs-input:focus,
+.rs-select:focus {
+  border-color: var(--rs-emerald);
+  box-shadow: 0 0 0 3px var(--rs-emerald-bg);
+}
+
+.rs-field-error {
+  font-size: 11px;
+  color: var(--rs-red);
+  min-height: 16px;
+}
+
+/* ============================================================
+   ALERTAS
+   ============================================================ */
+
+.rs-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--rs-radius-md);
+  border-left: 3px solid;
+  font-size: 13px;
+  margin-bottom: var(--space-4);
+}
+
+.rs-alert i {
+  font-size: 16px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.rs-alert-title {
+  font-weight: 500;
+  margin: 0 0 2px 0;
+}
+
+.rs-alert-body {
+  margin: 0;
+  color: var(--rs-text-secondary);
+}
+
+.rs-alert-info {
+  background: var(--rs-sky-bg);
+  border-color: var(--rs-sky);
+  color: var(--rs-sky);
+}
+
+.rs-alert-success {
+  background: var(--rs-emerald-bg);
+  border-color: var(--rs-emerald);
+  color: var(--rs-emerald);
+}
+
+.rs-alert-warning {
+  background: var(--rs-amber-bg);
+  border-color: var(--rs-amber);
+  color: var(--rs-amber);
+}
+
+.rs-alert-error {
+  background: var(--rs-red-bg);
+  border-color: var(--rs-red);
+  color: var(--rs-red);
+}
+
+.rs-alert-error ul,
+.rs-alert-error p {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--rs-red);
+  font-size: 13px;
+}
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+
+.rs-card {
+  background: var(--rs-bg-surface);
+  border: 1px solid var(--rs-border);
+  border-radius: var(--rs-radius-xl);
+}
+
+.rs-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--rs-border);
+}
+
+.rs-card-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--rs-text-primary);
+  margin: 0;
+}
+
+.rs-card-sub {
+  font-size: 11px;
+  color: var(--rs-text-secondary);
+  margin: 2px 0 0 0;
+}
+
+.rs-card-body {
+  padding: var(--space-6);
+}
+
+.rs-card-footer {
+  padding: var(--space-4) var(--space-6);
+  border-top: 1px solid var(--rs-border);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* ============================================================
+   BADGES DE ESTADO
+   ============================================================ */
+
+.badge-rs {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-2);
+  border-radius: var(--rs-radius-pill);
+  font-size: 11px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.badge-rs-pending   { background: var(--rs-slate-bg);   color: var(--rs-slate); }
+.badge-rs-received  { background: var(--rs-sky-bg);     color: var(--rs-sky); }
+.badge-rs-diagnosis { background: var(--rs-violet-bg);  color: var(--rs-violet); }
+.badge-rs-waiting   { background: var(--rs-amber-bg);   color: var(--rs-amber); }
+.badge-rs-repair    { background: var(--rs-emerald-bg); color: var(--rs-emerald); }
+.badge-rs-qa        { background: var(--rs-sky-bg);     color: var(--rs-sky); }
+.badge-rs-ready     { background: var(--rs-emerald-bg); color: var(--rs-emerald); }
+.badge-rs-delivered { background: var(--rs-slate-bg);   color: var(--rs-slate); }
+.badge-rs-cancelled { background: var(--rs-red-bg);     color: var(--rs-red); }
+
+/* ============================================================
+   TABLA
+   ============================================================ */
+
+.rs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.rs-table thead th {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--rs-text-secondary);
+  padding: var(--space-2) var(--space-4);
+  border-bottom: 1px solid var(--rs-border);
+  white-space: nowrap;
+}
+
+.rs-table tbody td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--rs-border);
+  color: var(--rs-text-primary);
+  vertical-align: middle;
+}
+
+.rs-table-row:hover td {
+  background: var(--rs-bg-elevated);
+}
+
+/* ============================================================
+   PANEL
+   ============================================================ */
+
+.rs-panel {
+  background: var(--rs-bg-surface);
+  border: 1px solid var(--rs-border);
+  border-radius: var(--rs-radius-lg);
+}
+
+.rs-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-6);
+  border-bottom: 1px solid var(--rs-border);
+}
+
+.rs-panel-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--rs-text-primary);
+  margin: 0;
+}
+
+.rs-panel-body {
+  padding: var(--space-4) var(--space-6);
+}
